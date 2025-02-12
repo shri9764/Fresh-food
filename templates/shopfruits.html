@@ -1,23 +1,16 @@
 {% extends "layout.html" %}
 {% block body %}
 
-{{for key,value in result.items()}}
-
-<h3>{{key}}</h3>
-<p >{{value}}</p>
-
-<!--
 <div class="row">
   <div class="col-md-12">
     <!-- Product grid for Page 1 -->
-    <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
+    <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4">
       
       <!-- Product 1 -->
       <div class="col">
         <div class="product-item">
           <figure>
             <a href="index.html" title="Whole Wheat Sandwich Bread">
-
               <img src="{{ url_for('static', filename='images/product-thumb-1.png')}}" alt="Whole Wheat Sandwich Bread" class="tab-center img-fluid">
             </a>
           </figure>
@@ -29,9 +22,15 @@
               <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
             </div>
             <div class="button-area p-3 pt-0">
-              <div class="row g-1 mt-2">
-                <div class="col-2"><input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1"></div>
-                <div class="col-7"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg>Buy </a></div>
+              <div class="row g-1 mt-2 align-items-center">
+                <div class="col-3">
+                  <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">Qty
+                </div>
+                <div class="col-9">
+                  <a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart">
+                    <svg width="18" height="18"><use xlink:href="#cart"></use></svg>Buy
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -54,12 +53,77 @@
               <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
             </div>
             <div class="button-area p-3 pt-0">
-              <div class="row g-1 mt-2">
-                <div class="col-2">
-                  <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity tab-right" value="1">
+              <div class="row g-1 mt-2 align-items-center">
+                <div class="col-3">
+                  <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity tab-right" value="1">Qty
                 </div>
+                <div class="col-9">
+                  <a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart">
+                    <svg width="18" height="18"><use xlink:href="#cart"></use></svg> Buy
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                <div class="col-9"><a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18" height="18"><use xlink:href="#cart"></use></svg> Buy </a></div>
+      <!-- Product 3 -->
+      <div class="col">
+        <div class="product-item">
+          <figure>
+            <a href="index.html" title="Organic Almond Butter">
+              <img src="{{ url_for('static', filename='images/product-thumb-3.png')}}" alt="Organic Almond Butter" class="tab-center img-fluid">
+            </a>
+          </figure>
+          <div class="d-flex flex-column text-center">
+            <h3 class="fs-6 fw-normal">Organic Almond Butter</h3>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <del>$16.00</del>
+              <span class="text-dark fw-semibold">$14.00</span>
+              <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">12% OFF</span>
+            </div>
+            <div class="button-area p-3 pt-0">
+              <div class="row g-1 mt-2 align-items-center">
+                <div class="col-3">
+                  <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">Qty
+                </div>
+                <div class="col-9">
+                  <a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart">
+                    <svg width="18" height="18"><use xlink:href="#cart"></use></svg>Buy
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col">
+        <div class="product-item">
+          <figure>
+            <a href="index.html" title="Organic Peanut Butter">
+              <img src="{{ url_for('static', filename='images/product-thumb-4.png')}}" alt="Organic Peanut Butter" class="tab-center img-fluid">
+            </a>
+          </figure>
+          <div class="d-flex flex-column text-center">
+            <h3 class="fs-6 fw-normal">Organic Peanut Butter</h3>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <del>$20.00</del>
+              <span class="text-dark fw-semibold">$18.00</span>
+              <span class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">10% OFF</span>
+            </div>
+            <div class="button-area p-3 pt-0">
+              <div class="row g-1 mt-2 align-items-center">
+                <div class="col-3">
+                  <input type="number" name="quantity" class="form-control border-dark-subtle input-number quantity" value="1">Qty
+                </div>
+                <div class="col-9">
+                  <a href="#" class="btn btn-primary rounded-1 p-2 fs-7 btn-cart">
+                    <svg width="18" height="18"><use xlink:href="#cart"></use></svg>Buy
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -67,20 +131,15 @@
       </div>
 
     </div> <!-- End product grid -->
-    
+
     <!-- Pagination -->
     <div class="pagination d-flex justify-content-center mt-4">
       <a href="page-2.html" class="btn btn-secondary">Next Page</a>
     </div>
   </div>
-</div>
-<!-- Page change-->
-         </div>
-        </div>
-      </div>
-    </section>
+</div> <!-- End row -->
 
-  -->
+
 {% endblock %}
 
 

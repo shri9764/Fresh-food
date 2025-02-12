@@ -1,11 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>User Profile</title>
 </head>
 <body>
-    <h1>Welcome, {{ username }}!</h1>
-    <p>Here are your profile details...</p>
-    <!-- More profile content here -->
+    <h1>Welcome, {{ user.Username }}!</h1>
+    <p><strong>Full Name:</strong> {{ user.Full_name }}</p>
+    <p><strong>Email:</strong> {{ user.Email }}</p>
+    <p><strong>Phone Number:</strong> {{ user.PhoneNo }}</p>
+    <p><strong>Gender:</strong> {{ user.gender }}</p>
+    <p><strong>Joined on:</strong> {{ user.created_at }}</p> <!-- Adjust this field based on your database structure -->
+
+    <!-- Add more profile details if you have them -->
+
+    <a href="{{ url_for('logout') }}">Logout</a>
 </body>
 </html>
+
